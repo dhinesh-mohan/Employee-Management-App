@@ -21,7 +21,7 @@ class EmployeeManagementApp {
 
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -80,7 +80,7 @@ class EmployeeManagementApp {
                 records.add(employee);
             }
         } catch (FileNotFoundException e) {
-            // File not found, create an empty list
+            
         }
         return records;
     }
@@ -128,8 +128,7 @@ class EmployeeManagementApp {
     }
 
     private static boolean evaluateCriteria(Map<String, String> employee, String criteria) {
-        // Implement criteria evaluation logic here
-        // For simplicity, assume the criteria is always salary > 50000
+    
         int salary = Integer.parseInt(employee.get("Salary"));
         return salary > 50000;
     }
